@@ -6,13 +6,8 @@ var start = function(route, handle) {
 		var pathname = url.parse(request.url).pathname;
 		console.log('Request for ' + pathname + ' recived.');
 
-		route(handle, pathname);
+		route(handle, pathname, response);
 
-		response.writeHead({
-			"Content-Type": "text/plain"
-		});
-		response.write('Hello World');
-		response.end();
 	}).listen(8888);
 	console.log('Server listen at port 8888');
 };
