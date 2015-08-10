@@ -7,7 +7,7 @@ var start = function(route, handle) {
 		var pathname = url.parse(request.url).pathname;
 		console.log('Request for ' + pathname + ' recived.');
 
-		route(handle, pathname, response, request);
+		route(handle, pathname, request, response);
 	}).listen(8888);
 	console.log('Server listen at port 8888');
 };
