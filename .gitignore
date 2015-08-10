@@ -1,3 +1,4 @@
-./node_modules
+node_modules/*
 nodebasic.sublime-project
 nodebasic.sublime-workspace
+npm_debug.log
